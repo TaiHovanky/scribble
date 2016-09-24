@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Scribble</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"></link>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></link>
+<style type="text/css">
+.container {
+  width: 100%;
+}
+
+#mainPage {
+  background-color: #66B8C0;
+}
+
+.jumbotron {
+  background-color: #E37222!important;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.isCursive {
+  font-family: 'Lobster', cursive;
+}
+
+#plusText {
+  display:none;
+}
+
+#adder:hover #plusText {
+  display:block;
+} 
+
+input {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.notebookTitle {
+  background-color: #E0E0DD;
+  color: #07889D;
+  border: none;
+}
+
+.saveNotes {
+  color:white;
+  background-color: #07889D;
+  border: none;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 30px;
+  height: 40px;
+  margin-top: 0px;
+}
+
+textarea {
+  background-color: #E0E0DD;
+  color: #07889D;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.content {
+  height: 500px;
+  border-radius: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container" id="mainPage">
+  <div class="appTitle jumbotron">
+    <h1 id="scribeTitle" class="isCursive">Scribble</h1>
+    <h3 id="scribeSubtitle" class="isCursive">Stray thoughts for another day</h3>
+  </div> <!--end of appTitle div !-->
+ 
+    <!-- <button id="adder"> !-->
+     <!-- <h2 id="plus">+</h2> !-->
+     <!-- <p id="plusText">New Notebook</p> !-->
+    <!-- </button> !-->
+  
+  <div class="notebookTabs">
+  </div> <!--end of notebookTabs !-->  
+  <form class="notebook" action="" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <!-- <input class="notebookTitle" type="text" placeholder="Your Notebook Title" id="titleNum0" ></input> !-->
+    <input type="submit" id="saveNo0" class="saveNotes col-md-6 col-xs-4 col-md-offset-3 col-xs-offset-4" value="Save" />
+    <textarea class="col-md-12 col-xs-12 content" id="noteNum0" name="noteContent">
+      <%= jotted %>
+    </textarea>
+  </fieldset>
+  </form> <!--end of notebook div !-->
+</div>
+
+<!--end of HTML content, beginning of JavaScript !-->
+
+</body>
+</html>
